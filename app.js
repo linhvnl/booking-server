@@ -50,9 +50,7 @@ app.use(errorRouter);
 // ---------------------------
 // CONNECT TO DATABASE and SERVER LISTEN
 mongoose
-  .connect(
-    "mongodb+srv://linhvnfx21261:0HVtTUgu3SudYeU3@shop.9ycowdn.mongodb.net/hotel_booking?retryWrites=true&w=majority"
-  )
+  .connect(process.env.MONGODB)
   .then((result) => {
     console.log("CONNECTED!");
     // server listen
